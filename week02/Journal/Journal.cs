@@ -30,9 +30,9 @@ public class Journal
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                foreach (Entry entry in _entries)
+                foreach (Entry e in _entries)
                 {
-                    writer.WriteLine(entry.ToString());
+                    writer.WriteLine(e);
                 }
             }
         }

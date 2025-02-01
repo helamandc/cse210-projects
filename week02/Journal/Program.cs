@@ -8,10 +8,11 @@ class Program
         int quit_int = 5;
         int action_int;
 
-        Journal recordEntry = new Journal();
-        Entry journalEntry = new Entry();
+
+
         PromptGenerator prompt = new PromptGenerator();
         DateTime currentDate = DateTime.Today;
+        Journal recordEntry = new Journal();
 
         Console.WriteLine("Welcome to the Journal Program!");
 
@@ -27,7 +28,7 @@ class Program
             if (action_int == 1)
             {
                 string date = currentDate.ToShortDateString();
-
+                Entry journalEntry = new Entry();
                 string question = prompt.GetRandomPrompt();
                 Console.WriteLine(question);
                 string answer = Console.ReadLine();
