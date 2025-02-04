@@ -3,26 +3,33 @@ public class Fractions
     private int _top;
     private int _bottom;
 
-    public Person()
+    public Fractions()
     {
-        _title = "";
-        _firstName = "Anonymous";
-        _lastName = "Unknown";
+        _top = 1;
+        _bottom = 1;
     }
 
-    public Person(string first, string last)
+    public Fractions(int topNumber)
     {
-        _title = "";
-        _firstName = first;
-        _lastName = last;
+        _top = topNumber;
+        _bottom = 1;
     }
 
-    public Person(string title, string first, string last)
+    public Fractions(int topNum, int bottomNum)
     {
-        _title = title;
-        _firstName = first;
-        _lastName = last;
+        _top = topNum;
+        _bottom = bottomNum;
     }
-    ...
+
+    public void GetFractionString()
+    {
+        Console.WriteLine($"{_top}/{_bottom}");
+    }
+
+    public void GetDecimalValue()
+    {
+        double decValue = (double)_top / (double)_bottom;
+        Console.WriteLine($"{decValue}");
+    }
 
 }
