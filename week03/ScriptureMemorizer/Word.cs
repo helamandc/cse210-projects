@@ -27,8 +27,7 @@ public class Word
 
     public string GetDisplayText()
     {
-        string text = "";
-        return text;
+        return _text;
     }
 
 }

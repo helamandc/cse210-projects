@@ -25,14 +25,19 @@ public class Reference
 
     }
 
-    public void GetDisplayTextVerse()
+    public string GetDisplayTextVerse()
     {
-        Console.WriteLine($"{_book} {_chapter}:{_verse} ");
+        //Exceeding requirements: Ensuring that the first letter of the string argument provided in the constructor is always starts in uppercase
+        string verse = char.ToUpper(_book[0]) + _book.Substring(1) + " " + _chapter + ":" + _verse;
+        return verse;
     }
 
-    public void GetDisplayTextVerses()
+    public string GetDisplayTextVerses()
     {
-        Console.WriteLine($"{_book} {_chapter}:{_verse} - {_endVerse} ");
+        //Exceeding requirements: Ensuring that the first letter of the string argument provided in the constructor is always starts in uppercase
+
+        string verses = char.ToUpper(_book[0]) + _book.Substring(1) + " " + _chapter + ":" + _verse + "-" + _endVerse;
+        return verses;
     }
 
 }
