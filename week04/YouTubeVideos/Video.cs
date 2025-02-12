@@ -29,9 +29,14 @@ public class Video
     }
     public void DisplayVideoLists1()
     {
+        int currentIndex = 0;
         foreach (Comment comments in _comments1)
         {
-            comments.GetDisplayComment();
+            if (currentIndex < _comments1.Count() - 1)
+            {
+                comments.GetDisplayComment();
+            }
+            currentIndex++;
         }
     }
 

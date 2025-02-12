@@ -12,7 +12,7 @@ class Program
         Console.WriteLine("Here the videos: \n");
 
         Video video1 = new Video("1. The Peace and Hope of Easter", "Pres. Russell M. Nelson", 300);
-        Video video2 = new Video("2.Why do we need a church?", "Pres. Dallin H. Oaks", 300);
+        Video video2 = new Video("2. Why do we need a church?", "Pres. Dallin H. Oaks", 300);
         Video video3 = new Video("3. It's not too late to repent", "Elder D. Todd Christofferson", 300);
 
         video1.DisplayVideo();
@@ -35,7 +35,7 @@ class Program
                 {
                     video1.DisplayVideo();
                     video1.DisplayVideoLists1();
-                    Console.WriteLine($"Total # of comments: {video1.CountComments1()}");
+                    Console.WriteLine($"Total # of comments: {video1.CountComments1() - 1}");
                     Environment.Exit(0);
                 }
             }
@@ -50,7 +50,7 @@ class Program
                 {
                     video2.DisplayVideo();
                     video2.DisplayVideoLists2();
-                    Console.WriteLine($"Total # of comments: {video2.CountComments2()}");
+                    Console.WriteLine($"Total # of comments: {video2.CountComments2() - 1}");
                     Environment.Exit(0);
                 }
             }
@@ -65,7 +65,7 @@ class Program
                 {
                     video3.DisplayVideo();
                     video3.DisplayVideoLists3();
-                    Console.WriteLine($"Total # of comments: {video3.CountComments3()}");
+                    Console.WriteLine($"Total # of comments: {video3.CountComments3() - 1}");
                     Environment.Exit(0);
                 }
             }
