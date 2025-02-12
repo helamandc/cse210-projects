@@ -1,14 +1,14 @@
 public class Comment
 {
 
-    private string _name;
-    private string _comment;
+    public string _name;
+    public string _comment;
 
     public Comment() { }
 
-    public void GetDisplayText()
+    public void GetDisplayComment()
     {
-        
+        Console.WriteLine($"{_name}: {_comment}");
     }
 
 

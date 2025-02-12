@@ -1,21 +1,65 @@
 public class Video
 {
 
-    private string _title;
-    private string _author;
-    private int _length;
-    private List<Comment> _comments = new List<Comment>();
+    public string _title;
+    public string _author;
+    public int _length;
+    public List<Comment> _comments1 = new List<Comment>();
+    public List<Comment> _comments2 = new List<Comment>();
+    public List<Comment> _comments3 = new List<Comment>();
 
     public Video() { }
 
-    public int CountComments()
+    public Video(string title, string author, int length)
     {
-        int count = 0;
+        _title = title;
+        _author = author;
+        _length = length;
+    }
+
+    public void DisplayVideo()
+    {
+        Console.WriteLine($"{_title}: {_author} ({_length} seconds)");
+    }
+
+    public int CountComments1()
+    {
+        int count = _comments1.Count();
         return count;
     }
-
-    public void GetDisplayText()
+    public void DisplayVideoLists1()
     {
-
+        foreach (Comment comments in _comments1)
+        {
+            comments.GetDisplayComment();
+        }
     }
+
+
+
+    public int CountComments2()
+    {
+        int count = _comments2.Count();
+        return count;
+    }
+    public void DisplayVideoLists2()
+    {
+        foreach (Comment comments in _comments2)
+        {
+            comments.GetDisplayComment();
+        }
+    }
+    public int CountComments3()
+    {
+        int count = _comments3.Count();
+        return count;
+    }
+    public void DisplayVideoLists3()
+    {
+        foreach (Comment comments in _comments3)
+        {
+            comments.GetDisplayComment();
+        }
+    }
+
 }
