@@ -8,16 +8,24 @@ public class Product
 
     public Product() { }
 
-
-    public string FullAddress()
+    public Product(string name, string prodID, double price, int qty)
     {
-        string fullAddress = "";
-        return fullAddress;
+        _name = name;
+        _productId = prodID;
+        _price = price;
+        _qty = qty;
     }
 
-    public void GetDisplayText()
+    public double TotalCost()
     {
+        double totalCost = _price * _qty;
+        return totalCost;
+    }
 
+    public string DisplayProductDetails()
+    {
+        string prodDetails = _productId + " | " + _name + " | " + "$ " + _price + " | " + _qty + "pcs";
+        return prodDetails;
     }
 
 }

@@ -3,27 +3,28 @@ using System.Runtime.InteropServices;
 public class Order
 {
 
-    private string _customer;
-    private string _products;
+    private Customer _customer = new Customer();
+    private Product _products = new Product();
 
     public Order() { }
 
-    public double TotalCost()
+    public Order(Customer cust, Product prod)
     {
-        double totalCost = 0;
-        return totalCost;
+        _customer = cust;
+        _products = prod;
+    }
+
+    public double TotalPrice()
+    {
+        double totalPrice = 0;
+        return totalPrice;
     }
     public string PackingLabel()
     {
-        return _customer;
+        return _products.DisplayProductDetails();
     }
     public string ShippingLabel()
     {
-        return _customer;
+        return _customer.GetDisplayInfo();
     }
-    public void GetDisplayText()
-    {
-
-    }
-
 }
